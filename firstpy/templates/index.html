@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock title %}
+
+{% block body %}
+<body class="bg-light text-dark">
+
+  <!-- Hero Section -->
+  <section class="bg-primary text-white text-center py-5">
+    <div class="container">
+      <h1 class="display-4 fw-bold">Welcome to {{ variable2 }}!</h1>
+      <p class="lead mt-3">A modern solution for all your needs. Fast, secure, and beautifully simple.</p>
+      <a href="#features" class="btn btn-light btn-lg mt-4">Learn More</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">What We Offer</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Speed</h5>
+              <p class="card-text">Lightning-fast performance to keep up with your business demands.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Security</h5>
+              <p class="card-text">State-of-the-art security features to keep your data safe.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Simplicity</h5>
+              <p class="card-text">Clean design and intuitive interfaces that everyone can use.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section class="bg-dark text-white text-center py-5">
+    <div class="container">
+      <h2 class="fw-bold">Ready to get started?</h2>
+      <p class="mb-4">Join {{ variable2 }} today and experience the difference.</p>
+      <a href="/signup" class="btn btn-outline-light btn-lg">Sign Up Free</a>
+    </div>
+  </section>
+
+</body>
+{% endblock body %}
