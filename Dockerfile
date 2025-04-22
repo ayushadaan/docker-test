@@ -9,14 +9,14 @@ RUN apt-get update && \
 # Set the working directory
 WORKDIR /app
 
-# Copy requirements first
+# Copy requirements first (for layer caching)
 COPY requirements.txt .
 
 # Install dependencies using the correct flag to bypass PEP 668
 RUN pip install --break-system-packages --no-cache-dir -r requirements.txt
 
 # Copy your Django project code
-COPY firstpy /app/
+COPY firstpy /app/firstpy
 
 # Switch into your Django app directory
 WORKDIR /app/firstpy
