@@ -8,7 +8,7 @@ COPY requirements.txt /app/
 COPY firstpy /app/firstpy
 
 # install any needed packages specified in requirements.txt
-RUN apt-get update && apt-get install -y python3 python3-pip && pip install -r requirements.txt && cd devops
+RUN apt-get update && apt-get install -y python3 python3-pip && pip install -r requirements.txt && cd firstpy
 
 # set environment variables
 # ENV NAME World
