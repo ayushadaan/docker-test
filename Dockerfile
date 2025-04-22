@@ -5,7 +5,7 @@ WORKDIR /app
 
 # copy the current directory contents into the container at /app
 COPY requirements.txt /app/
-COPY firstpy /app/
+COPY firstpy /app/firstpy
 
 # install any needed packages specified in requirements.txt
 RUN apt-get update && apt-get install -y python3 python3-pip && pip install -r requirements.txt && cd devops
