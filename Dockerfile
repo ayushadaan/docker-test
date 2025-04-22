@@ -16,7 +16,7 @@ COPY requirements.txt .
 RUN pip install --break-system-packages --no-cache-dir -r requirements.txt
 
 # Copy your Django project code
-COPY firstpy /app/firstpy
+COPY firstpy /app/
 
 # Switch into your Django app directory
 WORKDIR /app/firstpy
