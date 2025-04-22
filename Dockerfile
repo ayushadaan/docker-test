@@ -8,7 +8,7 @@ COPY requirements.txt /app/
 COPY firstpy /app/firstpy
 
 # install any needed packages specified in requirements.txt
-RUN apt-get update && apt-get install -y python3 python3-pip && pip install -r requirements.txt && cd firstpy
+RUN apt-get update && apt-get install -y python3 python3-pip && pip install -r requirements.txt && cd /app/firstpy
 
 # set environment variables
 # ENV NAME World
@@ -19,4 +19,4 @@ RUN apt-get update && apt-get install -y python3 python3-pip && pip install -r r
 EXPOSE 8000
 
 ENTRYPOINT [ "python3" ]
-CMD ["manage.py","runserver","0.0.0.0:8000"]
+CMD ["manage.py", "runserver", "0.0.0.0:8000"]
